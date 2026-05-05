@@ -2,10 +2,6 @@
 # Analyse Dynamique et Contournement de Sécurités Android
 
 
-**Auteur :** Chaira Hajar 
-**Discipline :** Sécurité des Applications Mobiles  
-**Date :** 05 Mai 2026
-
 ---
 
 ## 1. Introduction Générale
