@@ -24,10 +24,10 @@ Le bypass a été réussi pour les tests Java classiques. Cependant, nous avons 
 
 > [!NOTE]
 > **Capture 12.1 :** Interface de Medusa et chargement des modules.
-> ![Medusa Setup](./img-lab12-sec/1.png)
+> ![Medusa Setup](./img2/1.png)
 >
 > **Capture 12.2 :** Résultat du scan après application des modules.
-> ![Medusa Result](./img-lab12-sec/12.png)
+> ![Medusa Result](./img2/12.png)
 
 ---
 
@@ -42,10 +42,10 @@ Nous avons utilisé la stratégie de **Spawn** pour injecter le bypass dès la p
 
 > [!NOTE]
 > **Capture 13.1 :** Connexion réussie et invite de commande Objection.
-> ![Objection Shell](./img-lab13-sec/3.png)
+> ![Objection Shell](./img3/3.png)
 >
 > **Capture 13.2 :** État 100% Green (Bypass total incluant SELinux).
-> ![Objection 100%](./img-lab13-sec/8.png)
+> ![Objection 100%](./img3/6.png)
 
 ### 3.3 Bonus : Analyse des appels natifs
 Grâce à `frida-trace`, nous avons pu isoler les appels à la fonction native `fopen`, prouvant que l'application tente d'ouvrir des fichiers système pour détecter le root.
@@ -74,12 +74,12 @@ SystemProperties.get.overload('java.lang.String').implementation = function(name
 };
 ```
 
-### 4.3 Bypass du Code Natif (JNI)
-Certaines applications utilisent des bibliothèques C++ compilées (`.so`). Nous avons réussi à intercepter ces appels au moment de la transition Java -> Natif en hookant la classe `RootBeerNative`.
+### 4.3 Bypass bypass_root_basic.js
 
 > [!IMPORTANT]
-> **Capture 14.2 :** Logs du terminal montrant l'interception des appels natifs.
-> ![Native Hook Success](./img-lab14-sec/6.png)
+> ![ Success](./img-lab14-sec/4.png)
+> ![ Success](./img-lab14-sec/5.png)
+> ![ Resultat bypass](./img-lab14-sec/7.png)
 
 ---
 
